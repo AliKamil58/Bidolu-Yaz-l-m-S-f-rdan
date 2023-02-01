@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Burada legth metodu bize karakter dizisinin eleman sayısını verir.
+      var x = "Java script ile web tasarım ile  öğreniyorum";
+      var a = x.length;
+
+      document.writeln(a);
+
+      //Burada indexof ( ) metodu ise bize aradığımız kelimenin nerede olduğunu  nereden kaçıncı karakterden itibaren başladığnı verir bize gösterir.
+
+      var c = "Java script ile web tasarım ile  öğreniyorum";
+      let b = c.indexOf("script");
+      document.writeln(b);
+
+      //Bide last indexof var bu ise bize ilk ile yi değil son nerede varsa ile o ile bize verir.
+
+      var d = "Java script ile web tasarım ile  öğreniyorum";
+      let e = d.lastIndexOf("ile");
+      document.writeln(e);
+
+      //İndexofu biz nasıl kullanıyorsak searchinde  işlevi aynıdır .
+
+      /*Bizim birde slice metodumuz var.
+      Slice metodunda ilk index ten başlayarak son indexe kadar ilk index dahil son index dahil olmayacak şekilde
+      karakterler dizisi alınır.Bu anlattığım artılı slice metodunda .
+
+      Eksili slice( metodunda ise ilk index ve son index dahil değilidir.)
+       */
+      var f = "Java script ile web tasarım  öğreniyorum ile ";
+      let g = f.slice(6, 9);
+      console.log(g);
+
+      /*Subsitring metoduda vardır bu metodda ise bize belirtiğimiz indexten
+       başlayarak karakterler dzisininin sonuna kadar olan olan kısmı alır.
+       Substrşngşn slice metodundan farkısubstribgde negatifi desteklemez.
+       İster isek belli bir aralıktaki değerleri ekrana yazda diyebiliriz.
+       Birde biz eğer istediğimiz index numarasından itibaren bilmem dört karakter al dersek bize 0.indexten itibaren dört karakter verir.
+        Substringde bitiş indexi dahil değilken slice metodunda dahildir.
+
+
+       */
+
+      var h = "Java script ile web tasarım  öğreniyorum ile ";
+      let ı = h.substring(2);
+      let i = h.substring(0, 2);
+      let k = h.substring(7, 4);
+      document.writeln(ı);
+      document.writeln(i);
+      document.writeln(k);
+
+      //Biz eğer birdeğer yerine başka bir değer yazmk istiyorsak o zaman replace metodunu kullanırız.
+      var h = "Java SCRİPT ile web tasarım  öğreniyorum ile ";
+      //Biz burada  SCRİPT TE HARF BÜYÜK HARF KÜÇÜK HARF DUYARLILIĞINI KALDIRDIK VE sCRİPTİ kamil ile değiştirdik.
+
+      let l = h.replace(/SCRİPT/i, "kamil");
+
+      document.writeln(l);
+
+      //Biz bütün ileler için ama yazmak istiyorsak o zaman  biz  /sözcük/g yazarsak bütün ileleri ama yapar.
+
+      let n = "Java SCRİPT ile web tasarım  öğreniyorum ile ";
+      let m = n.replace(/ile/g, "ama");
+      document.writeln(m);
+
+      /*Biz eğer bütün harfleri büyük yazmak istesek o zaman to upper case kullanacağız
+       ama eğer biz bütün hepsini küçük yazmak istiyorsak o zaman biz to lower case metodunu kullanacağız.
+       */
+
+      let o = "Java SCRİPT ile web tasarım  öğreniyorum ile ";
+      let p = o.toUpperCase();
+      document.writeln(p);
+      let r = "Java SCRİPT ile web tasarım  öğreniyorum ile ";
+      let s = r.toLowerCase();
+      document.writeln(s);
+
+      //Birde concat diye bir metod var bu concat metodu iki stringin birleştirilmesi olarak düşğnülebilir.
+      var string1 = "Kamil bugün erken uyandı.";
+
+      var string2 = "Kamil bugün ders çalıştı.";
+
+      var stringler = string1.concat(" ", string2);
+      document.writeln(stringler);
+
+      let boşluk = "       kamil GÜLCAN";
+      let boşluk2 = boşluk.trim();
+      document.writeln(boşluk2);
+
+      //Birde charAt() metodu var bu metodindexOfun tam tersi indexOfta içeriye string yazıp index değerini alırken charAt() number yazıp string değerini alıyoruz.
+      let charAt = "Ali Kamil bugün";
+      let charAt2 = charAt.charAt(0);
+      document.writeln(charAt2);
+
+      //Birde charCode At() diye bir metodumuz var bu ise bize sayı olarak verdiğimiz değerin karşıkığından index numarasındaki karakterin bize codunu veriyor.
+      let charCode = "Ali kamil bugün geç uyudu";
+      let charCode2 = charCode.charCodeAt(15);
+      document.writeln(charCode2);
+
+      //Birde split metodu var bu split metodunda ise bize dizinin içiçndeki elemanlara index numaraları vererek ayırır ve  bir dizi oluşturur.
+
+      let dizi = "Ali,Kamil,gece,geç,yattıyor";
+      let dizi2 = dizi.split(",");
+    </script>
+  </body>
+</html>

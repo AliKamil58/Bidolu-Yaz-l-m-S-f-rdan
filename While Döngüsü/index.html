@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let meyveler = ["üzüm", "karpuz", "ayva", "böğürtlen"];
+
+      let i = 0;
+      while (i < meyveler.length) {
+        document.writeln(meyveler[i] + "<br>");
+        i++;
+      }
+
+      let giysiler = ["pantolon", "tişört", "ceket", "gömlek"];
+      let j = 0;
+      while (j < giysiler.length) {
+        document.writeln(giysiler[j]);
+
+        if (j == 2) {
+          break;
+        }
+        j++;
+      }
+    </script>
+  </body>
+</html>

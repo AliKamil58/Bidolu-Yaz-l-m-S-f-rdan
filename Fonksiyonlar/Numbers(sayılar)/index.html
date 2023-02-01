@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Burada e5 10 üzeri beş demektir.
+      document.writeln(345e5);
+
+      //   //Eğer buradaki gibi virgülden sonra  10-5 olmasını istiyorsak.5 tane hane olmasını istiyorsak o zaman e-5 yazacağız.
+      document.writeln(345e-5);
+
+      //Not e number demektir eğer ekranda bir nan görürsek biz bir string değer ile sayıyı bir işleme tabi tutmuşuz sonucu  sayı olmadığından dolayı nan vermiştir.
+      let sayı = "3";
+      let sayı2 = 3;
+      document.writeln(sayı + sayı2);
+      //Biz eğer biri sayı biri string türünden iki sayı yı çarparsak normal çarparken bölersek ve çıkartırsak normal çıkartırken topladığımızda yanyana yazar ikisini.
+
+      //Biz eğer bir sayıyı stringe çevirmek istersek herhangi bir sayı mesela x=10; x.toString() dedikten sonra çevirdiğimiz xi x e atıyoruz.
+      var x = 3;
+      x = x.toString();
+      document.writeln(typeof x);
+      //Biz eğer document.writeln dersek böyle olunca boşluklu bir şekilde ekrana yazdıracağımız şeyleri yazdırır.
+
+      /*Bu bize sayıyı 10 üzeri şelkine getirir.Biz burada virgülden sonra kaç haneyi göstermesini istiyorsak o zaman toExponential yazdıktan sonra
+
+      */
+      var z = 34.422;
+
+      z = z.toExponential(4);
+      document.writeln(z);
+
+      //To fixed metodu virgülden sonra kaç haneyi göstermek istiyorsak o kadar haneyi gösterir.
+
+      var a = 2.342323;
+      a = a.toFixed(2);
+      document.writeln(a);
+
+      //Bir de to precision var buda bize virgülden sonra göstermesini istediğimiz kadar haneyi gösterir sonrada diğer haneyi bize üstel şekilde verir.
+      //BU BİZE KAÇ HANEYİ GÖSTERMESİNİ İSTİYORSAK O KADAR HANEYİ BİZE GÖSTERİR.
+      var b = 3.433;
+      b = b.toPrecision(2);
+      document.writeln(b);
+
+      /*Biz değişkenlerde onadalıklı sayılara değer atarken atadığımız değerde , ile onadalık ayırma yapmayız nokta ile yaparız virgül ile yaparsak o zaman
+      Bize nan değerini verir.
+      let 
+      c=3,52
+        
+      document.writeln(c) 
+      Ekran çıktısı NAN
+    */
+
+      /*Biz eğer ondalık bir sayıyı integera çevirmek istiyorsak parseint kullanıyoruz.
+       */
+      d = 3.56;
+      d = parseInt(d);
+      document.writeln(d);
+
+      /*Biz burada Max value ve min value de amacımız virgülden sonra 
+      en fazla bu kadar büyüklülkteki bir sayıyı yazabilirsiniz demek oluyor.Java scripttte */ a;
+      let e = Number.MAX_VALUE;
+      document.writeln(e);
+      let f = Number.MIN_VALUE;
+      document.writeln(f);
+    </script>
+  </body>
+</html>

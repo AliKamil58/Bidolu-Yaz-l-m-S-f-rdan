@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        background-color: aqua;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <p id="p1">Pragraf 1</p>
+      <p id="p1">Paragraf 2</p>
+      <p id="p1">Paragraf 3</p>
+      <p id="p1">Paragraf 4</p>
+      <script>
+        //Biz burada innerHTML ile yazıyı değiştirdiğimiz gibi rengini de değiştirebiliriz.
+        document.getElementsByTagName("p")[0].innerHTML =
+          "Güncellenen Paragraf";
+        document.getElementsByTagName("p")[0].style.backgroundColor = "red";
+
+        /*Biz java scriptte burada bir tagname, id, classtan birden fazla elementi şeçip ulaşamıyoruz.
+        Bunu yapabilmek için bizim  döngü kurmamız gerekiyor.*/
+
+        let x = document.getElementsByTagName("p");
+
+        for (i = 0; i < x.length; i++) {
+          x[i].style.color = "green";
+        }
+      </script>
+    </div>
+  </body>
+</html>

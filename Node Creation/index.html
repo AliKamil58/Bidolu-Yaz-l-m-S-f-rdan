@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 50%;
+        height: auto;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">Birinci paragraf</p>
+      <p id="p2">İkinci paragraf</p>
+      <p id="p3">Üçüncü paragraf</p>
+      <p id="p4">Dördüncü paragraf</p>
+    </div>
+    <script>
+      /*BUrada ilk başta biz adivi bir a değişkenine atadık her seferşnde yazarken uzun uzun yazmamak için
+          daha sonrada bir p elementi oluşturduk sonra createTextNode diyerek java script öğreniyorum yazsını  y ye atadık.a
+           Sonra y yi biz x in içine koyduk.Sonrada biz p3 etiketinden önce x i divin içine katdettik.*/
+      let a = document.getElementById("div1");
+      var x = document.createElement("p");
+      var y = document.createTextNode("Java script öğreniyorum");
+      x.appendChild(y);
+      a.insertBefore(x, document.getElementById("p3"));
+
+      /*Biz eğer divin içindeki çocukları  silmek istiyorsak  a.removeChild ()* dedikten sonra parantezin içerisine  silmek istediğimiz çocuğun adını yazarak içindeki çoucğu silebiliriz.
+          Burada biz remove childın parantezlerinin içine silmekmek istediğimiz cocuğun idsini yazacağız ve siliş olacağız.
+          */
+      a.removeChild(document.getElementById("p1"));
+
+      /*Biz eğer burada bir elemenrtin içindeki yazıyı başka bir yazıyla değiştirmek istiyorsak
+        o zaman biz ilk başta  değiştirmek istediğimiz elementin ismini yazacağız
+        sonra . koyup replace() dedikten sonra da parantezin içersine biz ilk
+       yeni metnin buraya yazacağız sonrada biz değişiklik yapmak istedğimiz elementi buraya yazacağız.*/ a;
+      let c = document.createTextNode("Merhaba ben kamil");
+      let değişiklikYapılacakŞey = document.getElementById("p2");
+      a.replaceChild(c, değişiklikYapılacakŞey);
+
+      /*Biz eğer idsi div1 olan şeyi div2 olarak değiştirmek istiyorsak o zaman ilk değiştirmek istediğimiz attributenin adı daha sonrada
+      araya virgül koyarak vereceğimiz yani idnin kendisin koyacağız*/
+
+      //?  !!!!!!!!!!!!!!!    a.setAttribute("id", "div4");!!!!!!!!!!!!!!!!!!!!!!
+
+      //Biz  bir de class oluşturup daha sonra da oluşturduğumuz clasın isimini  value diyerek değiştirebiliriz.
+
+      /*Burada  html elementine yani div1 e yeni bir özellik eklemek için  ilk larak bir createAttribute oluşturduk yani class attributesi oluşturduk sonra ise oluşturmulş olduğumuz class atttribuesinin içine bir değer attık
+         sonrada bu içerisine değer atılmış classı div1 elementinin içerisine yerleştiriyoruz.*/
+
+      let deneme = document.createAttribute("class");
+      deneme.value = "kamil";
+
+      /*SetAttribute node bir html elementinin bir attiributesine ad ataması yapmak için kullanılır.
+      Burada biz önceden oluşturulan class attributesini a ya yani div elementineekledik attribute olarak.
+      */
+      a.setAttributeNode(deneme);
+    </script>
+  </body>
+</html>

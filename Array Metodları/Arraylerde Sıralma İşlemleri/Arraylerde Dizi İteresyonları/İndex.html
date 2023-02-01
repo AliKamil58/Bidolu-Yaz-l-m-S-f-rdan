@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <script>
+      let sayı = [34, 643, 533, 42, 32];
+      let yazı = " ";
+      sayı.forEach(function yazdır(value, index, array) {
+        yazı += value + "</br>";
+      });
+      document.querySelector(".div1").innerHTML = yazı;
+
+      //Birde map() metodu vardır bu metod bir dizideki elemanları teker teker alır ve her elemanı teker teker alrak işlem yapmamızı sağlar.
+      /*Birde map( ) metodu şunun için kullanılır biz alttaki örnekteki gibi bir dizinin içindeki objelerdeki değişkenlerden bir kısmını
+      teker teker alıp aldıktan sonrada bunları dizi yaparak oluşturabilmek için kullanılır.
+      //Map fonksiyonu yeni bir array oluşturmaya yarar.
+      */
+      let kişiler = [
+        { ad: "Ahmet", yaş: 22 },
+        { ad: "Mehmet", yaş: 32 },
+        { ad: "İlayda", yaş: 22 },
+        { ad: "Abdullah", yaş: 42 },
+      ];
+
+      let kişilerinYaşları = kişiler.map(function (kişi) {
+        return kişi.yaş;
+      });
+      console.log(kişilerinYaşları);
+
+      //Burada sayıların 3 ile çarparak yeni sayıları bir arrayda üç ile çarpılmış şekliyle  ve yeni bir dizi oluşturarak onun içine aktarmış olduk.
+
+      let sayılar = [23, 54, 67, 34, 63];
+
+      function çarp(value) {
+        debugger;
+        return value * 3;
+      }
+
+      let sayı1 = sayılar.map(çarp);
+      document.writeln(sayı1);
+
+      //Birde bzim filter metodumuz var  bu metod ise filterelemeye yarıyor adı üştünde.
+      let rakamlar = [2, 8, 4, 6, 9];
+
+      let yenirakamlar = rakamlar.filter((value) => {
+        return value > 5;
+      });
+
+      document.writeln(yenirakamlar);
+
+      //Reduce metodu bütün elemanları tek tek döner ve sonunda bizim istediğmiz şeye göre tek bir değer verir bize.
+
+      let numaralar = [12, 56, 32, 67, 24];
+
+      function toplam(sayı, total) {
+        return (total += sayı);
+      }
+      let yeninumaralar = numaralar.reduce(toplam, 100);
+      document.writeln(yeninumaralar);
+
+      //Biz üstteki örnekte reducede sayı değişkeninin yanı hangi sayıyı yazarsak otomatikman sayı o sayıdan başlar.
+
+      /*Birde bizim every() metodu var bu metod ise bize dizideki bütün elemanları teker teker dönecek
+       bütün eleamlar alltaki fonksiyondaki koşula uyuyorsa true uymuyorsa  bir tanesi bile uymuyorsa false dönecek.*/
+
+      let sayılar4 = [12, 54, 56, 23, 76, 34];
+      let onSekizdenBüyükmü = sayılar4.every((value) => {
+        return value > 18;
+      });
+      document.writeln(onSekizdenBüyükmü);
+
+      //Birde bizim find metodumuz var bu metod ise bize 18 den büyük dizideki ilk değeri verir.O da 40 dır.
+
+      let sayılar5 = [40, 32, 65, 53, 23];
+      let yenisayılar5 = sayılar5.find((value) => {
+        return value > 18;
+      });
+      document.writeln(yenisayılar5);
+
+      //Find index var buda bize 18 den büyük ilk sayının index numarasını verir.
+      let sayılar6 = [40, 32, 65, 53, 23];
+      let yenisayılar6 = sayılar5.findIndex((value) => {
+        return value > 18;
+      });
+      document.writeln(yenisayılar6);
+
+      /*Bizim birde indexof metodumuz var bunu biz stringlerde yapmıştık 
+      burada index of girdiğimiz sayının bize kaçıncı indexte olduğunu verir.
+      Eğer herhangi bir indextek bu sayı yer almıtoyrsa o zaman -1 sonucunu bize verir.
+      */
+      let sayılar7 = [40, 32, 85, 33, 23];
+      let yenisayılar7 = sayılar5.indexOf(32);
+      document.writeln(yenisayılar7);
+    </script>
+  </body>
+</html>

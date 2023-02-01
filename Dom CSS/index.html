@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        height: 80px;
+        width: 100%;
+        background-color: yellow;
+      }
+      #div2 {
+        height: 80px;
+        width: 100%;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div1" class="class1" name="name1">Java script öğreniyorum</div>
+    <script>
+      //Style demek ben bu elementi seçtim css özelllikleriyle oynayacağım demek oluyor.
+      document.querySelector("#div1").style.color = "red";
+      document.querySelector("#div1").style.marginTop = "20px";
+
+      //Biz bunları her seferinde böyle uzun uzun yazmak yerine  bir değişkene atayarak daha kolay bir şekilde istediğimiz rengini değiştirebiliriz.
+      /*Biz css lodlarını java scriptte vermek istediğmizide
+       css te mesela background-color da - ile ayırıyoruz ya java scriptte bunun yerine tire kaldırıyoruz 
+       ve onun yerine tireden sonra gelen harfi büyük yazıyoruz.*/
+      let a = document.querySelector("#div1");
+      a.style.backgroundColor = "blue";
+      a.style.fontSize = "20px";
+    </script>
+  </body>
+</html>

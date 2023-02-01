@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Math bir maytemtik kütüphanesidir.Bu kütüphanenin içindeki pi yi kullandık biz.*/
+      let pi = Math.PI;
+      document.writeln(pi);
+
+      //Bi sayının ondalıklı kısmını yuvarlamak için biz round özelliğini kullanıyoruz.
+      let round = Math.round(12.34);
+      document.writeln(round);
+
+      //Birde Math kütüphandesinde ceil metodu var bu metod ise biz ne yazarsak hangi sayıyı yazarssak yazalım bize
+      let ceil = Math.ceil(3.6);
+      document.writeln(ceil);
+
+      //Math kütüphansinden birde ceil metodu var bu metod ise her zaman bize girdiğimiz değeri altae yuvalar.
+      let floor = Math.floor(3.7);
+      document.writeln(floor);
+
+      //Matematikte birde üstlü sayı metodu olan pow() metoduda var.BUrada birinici değer  taban sayısı ikinci değer ise sayının üstüdür.
+      let pow = Math.pow(2, 4);
+      document.writeln(pow);
+
+      //Birde karakök alma metodu var Math.sqrt()
+
+      let sqrt = Math.sqrt(4);
+      document.writeln(sqrt);
+
+      //Mutlak değer metodu Math.abs()
+      let abs = Math.abs(-34);
+      document.writeln(abs);
+
+      //Matematiksel sinüs 64 gib değerler girebiliriz.
+      let sinüs = Math.sin(64);
+      document.writeln(sinüs);
+
+      //Matematiksel cosünüste yapabiliriz.
+      let cosünüs = Math.cos(42);
+      document.writeln(cosünüs);
+
+      //Matematiksel en küçük değer bulmada min() metodunu kullanıyoruz.
+      let minValue = Math.min(34, 64, 23, 45);
+      document.writeln(minValue);
+
+      //Matematiksel en büyük değer bulmada max() metodunu kullanıyoruz.
+      let maxValue = Math.max(34, 67, 31, 55, 12);
+      document.writeln(maxValue);
+
+      //Bizim birde random özelliğimiz var bu özelliğimizde bize sıfır ile bir arasında rastgele bir sayı verir.
+      let random = Math.random();
+      document.writeln(random);
+
+      //Biz birde randomdan gelen sayıları yuvarlama yapıp tam sayı haline döndirebiliriz.0 ile 10 arasında değerleri ekrana yazdırırız.
+      let random2 = Math.round(Math.random() * 10);
+      document.writeln(random2);
+
+      //Biz eğer 1 10 arasında değerler görmek istiyorsak o zaman biz ceil metoduyla sürekil yukarı yapacağız .
+      let random3 = Math.ceil(Math.random() * 10);
+      document.writeln(random3);
+      //Bİz 0 ile 9 arasında değerler görmek istiyosak o zaman biz floor metodunu kullanarak aşğıya doğru  yuvarlamasını sağlayacağız.
+      let random4 = Math.floor(Math.random() * 10);
+      document.writeln(random4);
+    </script>
+  </body>
+</html>

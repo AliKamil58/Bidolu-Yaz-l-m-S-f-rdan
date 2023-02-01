@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Biz eğer bir değişkeni stringe çevirmek isytiyorsak
+      1.YOL */
+
+      var a = String(6);
+      document.writeln(typeof a);
+
+      /*2.YOL*/
+
+      var a = 5;
+      a = a.toString();
+      document.writeln(typeof a);
+
+      //Nmuber() metodu ise bize Number olmayan şeylerii numbere dönüştürür.
+      let b = "3";
+      b = Number(b);
+      document.writeln(typeof b);
+
+      /*Bizim birde yapıcı metodumuz constructorumuz var.
+      Biz burada a.constructor dediğimizde isimi array olan bir yapıcı  fonksiyonu bize verir.
+      Çünkü burada bizim a bir dizi yani arraydir. */
+
+      var a = ["Elma", "Üzüm", "Çilek", "Muz"];
+      document.writeln(a.constructor);
+
+      //Biz eğer bu a arrayinin arrraymi değilmi olduğunu tespit etmek istiyorsak aşğıdaki şeyi yapıyoruz.
+      function kontrol(x) {
+        return x.constructor.toString().includes("Array");
+      }
+      let arraymı = kontrol(a);
+      document.writeln(arraymı);
+    </script>
+  </body>
+</html>

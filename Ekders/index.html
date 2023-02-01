@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        background-color: red;
+        color: black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div"></div>
+    <script>
+      let div1 = document.querySelector(".div");
+      div1.innerHTML = "Kamil";
+    </script>
+    <!-- Biz scripti htmlden sonra yazmalıyızki ondan önce olan body elemetini scripttin altında yazmaya kalkarsak o zaman hata verir.Bunu engellemek için scripti html den sonra yazmalıyız. -->
+  </body>
+</html>

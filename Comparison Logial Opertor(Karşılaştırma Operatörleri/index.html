@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Biz burada ilk olarak a==b diyerek sadece içeriklere baktık a ve binin içerikleri aynı olduğundan dolayı true değer döndü.*/
+
+      var a = 10;
+      var b = "10";
+      var c = a == b;
+      document.writeln(c);
+
+      //Biz burada hem içeriklere hemde türlere baktık içerikler aynı olasmına rağmen türler aynı olmadığından dolayı false değer döndü bize.
+      var d = 10;
+      var e = "10";
+      var g = d === e;
+      document.writeln(g);
+
+      //Birde ünlem eşittir var bu da  d!=b;
+      var h = d != e;
+      document.writeln(h);
+
+      //Birde ünlem eşittir var bu da  d!==b;
+      var ı = d !== e;
+      document.writeln(ı);
+
+      //Birde büyük eşittir var
+      var i = d >= e;
+      document.writeln(i);
+
+      //Burada şimdi sırada mantık operatörlerine bakıyoruz.İlk olarak burada birinici olarak && ve operatörüne bakıyoruz.
+      //Burada  koşullardan k<l ve l<m  den birisi l<m sağlamadığından dolayı sonuç false oluyor.Ve && de bütün kouşlların sağlaması lazım.
+
+      var k = 2;
+
+      var l = 6;
+      var m = 1;
+      var n = k < l && l < m;
+      document.writeln(n);
+
+      //Bizim birde veya bağlacımız var  bundan bir tane koşulun sağlaması yeterlidir true dönmesi için .
+
+      var o = k < l || l < m;
+      document.writeln(o);
+
+      //Bizim birde değildir işaretimiz var bu işaret bursa x mden küçük değilmi şekilnde sotu sormasını sağlar.
+      //alltada k l den küçük değilmi diye soru sormasını sağlar.
+      var ö = !k < l || !l < m;
+      document.writeln(ö);
+    </script>
+  </body>
+</html>

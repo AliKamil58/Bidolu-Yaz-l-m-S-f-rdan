@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fonksiyonAdı(isim, soyİsim) {
+        document.write(isim + " " + soyİsim);
+      }
+
+      //Biz fonkisyonu bu şekilde yaptığımızda return ile  dönen değeri 4 ile çapıp sonucu ekrana yazdırabiliyoruz.
+      fonksiyonAdı("Ali", "Kamil");
+
+      function kamil(sayı, sayı2) {
+        return sayı + sayı2;
+      }
+      let x = kamil(2, 3) * 4;
+
+      document.write(x);
+      //Biz eğer burada return kullanmassak o zaman sonradan x e değer yazdıramayız.
+      function mehmet(sayı, sayı2) {
+        document.write(sayı + sayı2);
+      }
+      let y = mehmet(6, 3) * 4;
+      document.write(y);
+
+      function tonHesapla(kilogram) {
+        let x = kilogram / 1000;
+
+        return x;
+      }
+      let z = tonHesapla(4);
+      document.write(z);
+    </script>
+  </body>
+</html>

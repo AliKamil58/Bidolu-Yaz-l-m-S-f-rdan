@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var meyveler = ["Elma", "Armut", "Muz", "Çilek"];
+      document.writeln(meyveler);
+      //Biz arrayimizin kaç tane elemanı var onu öğrenmek istiyorsak o zaman biz meyvelr.length yazacağız.
+      document.writeln(meyveler.length);
+
+      /*
+      Biz eğer arrayimizde son elemana ulaşmak istiyorsak o zaman  elemanların indexi sıfırddan başladığından dolayı son elemanın index elemanların indexinden 1 eksik oluyor 
+      biz  meyveler.length -1 dersek o zaman biz son elemanına ulaşmış oluruz.
+      */
+      let sonuncuMeyve = meyveler[meyveler.length - 1];
+      document.writeln(sonuncuMeyve);
+
+      /*Push() metodu bize dizinin sonuna eleman eklemeye yarar.*/
+      let sebzeler = ["Biber", "Soğan", "Pırasa", "Tereotu"];
+      sebzeler.push("Lahana");
+      document.writeln(sebzeler);
+
+      //Bizde pop() metodu var bu pop metodu ise bize  dizideki en son elemanı çıkarmaya yarar.
+      sebzeler.pop();
+      document.writeln(sebzeler);
+
+      //Biz eğer ilk elemanı silmek istiyorsak o zaman shift kullanacağız.
+      sebzeler.shift();
+      document.write(sebzeler);
+
+      //Biz ilk sıraya eleman eklemek için kullanılır.
+      sebzeler.unshift("Turp");
+      document.writeln(sebzeler);
+
+      //Biz burada slice metodunu kullanarak artık  belli kesitleri alabiliriz.BUrada slice(1) dersek 1.indexten başla ve 1 ve 1 den sonraki bütün elemanları ekrana yaz demiş oluyoruz.
+
+      let yemekler = ["salata", "çorba", "pilav", "yeşilfasulye", "kebap"];
+      let yemek = yemekler.slice(1);
+      document.writeln(yemek);
+
+      //Belirli bir aralıkta  olabiliri.
+
+      let yemek1 = yemekler.slice(1, 4);
+      document.writeln(yemek1);
+
+      /*Birde slice metoduna ad olarak çok benzeyen splice() metodu var bu metodda ise ilk eğer eleman eklemek istiyorsak eklemek istediğimix elemanın indexini yazıyoruz.
+Eğer biz bir indexe eleman eklemek istiyorsak örnek.splice(2,0,"Kamil")
+Bu üstteki şekilde yaparsak belirttiğimiz indexteki elemanı yana atıp 2.indexe "kamil" elemanını koyuyoruz.*/
+
+      yemekler.splice(1, 0, "Tavuk");
+      document.writeln(yemekler);
+      /*
+  Eğer biz bir indexteki  elemanı çıkartıp onun yerine başka bir eleman eklemek  istiyorsak örnek.splice(2,1,"kamil")    ,
+  Bu üsttekini yapmak istiyorsak o zaman biz 2.indexteki elemanı sileriz onun yerine yine aynı indexe biz kamil elemanını koyarız
+
+  BİZ BURALARDA 0 VE 1 İN FARKI SIFIR HERHANGİ BİR ELEMANI SİLME DEMEK 1 İSE BİR ELEMENI SİL VE ONUN YERİNE BAŞKA BİR ELEMAN EKLE DEMEK 
+  splice(1,2,"Tavuk") dersek nu şekildede  1.indexten başla 2 eleman sil yerine tavuk yaz demek oluyor.
+  Veya burada splice(1,2,"İskender","Tandır ")'da olur
+*/
+      yemekler.splice(1, 1, "Tavuk");
+      document.writeln(yemekler);
+
+      /*splice(1,2,"Tavuk") dersek nu şekildede  1.indexten başla 2 eleman sil yerine tavuk yaz demek oluyor.
+  Veya burada splice(1,2,"İskender","Tandır ")'da olur
+  */
+      yemekler.splice(1, 2, "Tavuk", "İskender");
+      document.writeln(yemekler);
+
+      //Birde concat( ) metodu var bu metodda bize iki diziyi birbirine bağlamamızı sağlıyor.
+      let resimler = ["resim", "resim1", "resim2", "resim3"];
+      let markalar = ["adidas", "nike", "puma", "slazenger", "lescon"];
+      let resimleeer = resimler.concat(markalar);
+      document.writeln(resimleeer);
+    </script>
+  </body>
+</html>

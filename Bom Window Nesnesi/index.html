@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- !Browser Object Model demek biz bunu  java scirpt ile tarayıcı arasında köprü kurarak işlemler yapmak için kullanıyoruz. -->
+
+    <!-- Biz burada alert kutusunda alta geçebilmek için \n kullanıyoruz -->
+    <script>
+      window.alert("Kamil Nasın \n iyiyim");
+      window.prompt("Yaşınızı giriniz?");
+
+      //Bizim birde confirm var bu ise bize onaylama veya reddet seçecneği sunan bir kutucuk verir.Burada bize ya true ya false değer döner.
+      let x = confirm("Çerezleri kabul ediyor musunuz?");
+
+      if (x) {
+        document.writeln("Onaylandı");
+      } else {
+        document.writeln("Reddedildi");
+      }
+    </script>
+  </body>
+</html>

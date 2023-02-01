@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <script>
+      //Bizim burada var tarih new Date dememizle var isim new String("sasss") dememiz aynı şey.İkisindede tarih ve isim  objedir.
+
+      //Bizim burada yapmış olduğumuz şey aslında String objesinden ve Date objesinden yeni bir değişken bir referans üretmektir.
+
+      //Aslında string ve date bir obje içinde değişkenler ve değerler var .
+
+      let tarih = new Date(2023, 0, 25, 20, 51, 30, 32);
+      document.writeln(tarih);
+      let isim = new String();
+
+      //Biz eğer saaatin kaç olduğunu milisaniye cinsinden yazmak istiyorsak
+
+      let milisaniyeSaat = tarih.getTime();
+      document.writeln(milisaniyeSaat);
+      //Biz eğer yıl görmek istiyorsak
+
+      let yıl = tarih.getFullYear();
+      document.querySelector(".div1").innerHTML = yıl;
+
+      let ay = tarih.getMonth();
+      //Biz indexler şekilnde yazdığımızdan dolayı ocak 0.indexe denk geliyor.Yani normalde olması gerken ay numarasından bir eksiğini gösteriyor.
+
+      document.querySelector(".div2").innerHTML = ay;
+      //Tarih gün  şeklindede yazabiliriz.
+      let güntarih = tarih.getDate();
+      document.querySelector(".div3").innerHTML = güntarih;
+
+      let;
+    </script>
+  </body>
+</html>

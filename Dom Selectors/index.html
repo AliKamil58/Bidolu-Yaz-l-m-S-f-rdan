@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 100%;
+        height: 40px;
+        background-color: red;
+      }
+
+      #div2 {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(0, 102, 255);
+      }
+
+      #div3 {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(30, 255, 0);
+      }
+
+      #div4 {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(102, 255, 0);
+      }
+
+      #div5 {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(251, 255, 0);
+      }
+
+      #div6 {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(255, 136, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="class1" name="name1"></div>
+    <div id="div2" class="class1"></div>
+    <div id="div3" class="class1"></div>
+    <div id="div4" class="class1"></div>
+    <div id="div5" class="class1"></div>
+    <div id="div6" class="class1" name="name1"></div>
+    <script>
+      //Biz burada herhangi bir indexteki dive innerhtml ile içine yazı yazdırabiliriz.
+
+      document.querySelectorAll(".class1")[4].innerHTML = "Java Script";
+
+      //Biz eğer elementlere ulaşmak istiyorsak get element by tag name diyeceğiz.
+      document.getElementsByTagName("div")[1].innerHTML = "Merhaba";
+
+      /*Bizim birde get element by name var name bizim bildiğimiz name .Burada name değişkenin içindeki name1 değerini 
+        yazacağız  get element by name dediğimizde*/
+
+      /*Biz eğer name1 dediğmizde [1].indexi yazarsak nameler içerisinde 1.indexteki snameyi alır.*/
+      document.getElementsByName("name1")[0].innerHTML = "Kamil";
+
+      //Bizm birde queryselectorAll var bu ise bize divlerin  hepsini gexer ve 0.idli divi verir.
+      document.querySelectorAll("div")[3].innerHTML = "Mahmut";
+      //Biz bunu class1 ilede yapabiliriz.
+      document.querySelectorAll(".class1")[2].innerHTML = "ali";
+
+      //Bu leşiklde idlerinide değiştirebiliriz.
+      document.querySelector("#div1").id = "Kamil";
+    </script>
+  </body>
+</html>

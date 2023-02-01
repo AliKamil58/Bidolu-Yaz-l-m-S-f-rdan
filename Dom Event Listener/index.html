@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        background-color: aqua;
+        width: 100%;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <button id="btn">Tıkla</button>
+
+    <script>
+      //Add evet listenerlarda başında on bulunmuyo.
+      document.querySelector("#btn").addEventListener("click", function () {
+        document.getElementById("div1").innerHTML = "Butona tıklandı";
+        document.getElementById("div1").style.borderRadius = "20px";
+      });
+
+      var a = document.getElementById("btn");
+      //Burada ismini girmesse ekranda null yazacağını söylüyoruz.
+      var isim = prompt("Lütfen isminizi giriniz", "null");
+
+      //Burada addEventListenerın içindeki olayı  functionu  başka bşr yerde tanımlayıp burada ismiylede çağırabiliriz.
+      a.addEventListener("click", selamlama);
+      {
+      }
+
+      function selamlama() {
+        document.getElementById("div1").innerHTML = "Hoşgeldiniz";
+      }
+      a.addEventListener("click", arkaPlan);
+
+      function arkaPlan() {
+        document.getElementById("div1").style.backgroundColor = "red";
+      }
+      //Biz evetlistenerden hangisini kaldıracağımızı remove.EventLsitemer ile yapacağız.Bz burada hem tıklama olayını ismini hemde fomnksiyonun ismini yazacağız
+
+      a.removeEventListener("click", selamlama);
+    </script>
+  </body>
+</html>

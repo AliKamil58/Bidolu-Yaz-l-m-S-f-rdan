@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.writeln(window.screen.width);
+
+      //Ekeranımızda kullanabileceğimiz piksel değerini bize verir.Avail height sadece belli bir kısmı bize verir.
+      var x = screen.availHeight;
+
+      document.writeln(x);
+
+      //Color depth bize renk derinliğini verir.
+      let y = window.screen.colorDepth;
+      document.writeln(y);
+
+      //pixel depth buda bşze piksel derinliğini verir.
+
+      let z = window.screen.pixelDepth;
+      document.writeln(z);
+    </script>
+  </body>
+</html>

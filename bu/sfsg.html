@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="filterInput" />
+      <button onclick="filterProducts()">Filter</button>
+    </form>
+
+    <ul id="productList">
+      <li>kamil</li>
+      <li>kamuran</li>
+      <li>product3</li>
+      <li>product4</li>
+      <li></li>
+    </ul>
+
+    <script>
+      const productList = document.querySelector("#productList");
+      const filterInput = document.querySelector("#filterInput");
+
+      function filterProducts() {
+        let filterValue = filterInput.value.toLowerCase();
+        let products = productList.getElementsByTagName("li");
+
+        for (let i = 0; i < products.length; i++) {
+          let product = products[i];
+          let productName = product.textContent || product.innerText;
+          if (productName.toLowerCase().indexOf(filterValue) > -1) {
+            product.style.display = "";
+          } else {
+            product.style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

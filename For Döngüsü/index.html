@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <script>
+      for (let i = 0; i <= 4; i++) {
+        document.querySelector("#div1").innerHTML +=
+          "Bugün günlerden perşembe <br>";
+      }
+
+      //Biz birde burada sayılı şekildede yapabiliriz.
+
+      for (let j = 10; j >= 0; j--) {
+        document.writeln(j + "<br>");
+      }
+
+      //Birde biz bunu azalan şekilde 10dan 0 a doğruda yapabiliriz.
+      for (let l = 0; l <= 10; l++) {
+        document.writeln(l + "<br>");
+      }
+
+      //
+
+      let meyveler = ["üzüm", "erik", "elma", "kivi"];
+
+      for (let i = 0; i < meyveler.length; i++) {
+        document.writeln(meyveler[i] + "<br>");
+      }
+
+      for (i = 1; i <= 10; i++) {
+        debugger;
+        for (j = 1; j <= 10; j++) {
+          console.log(i + "*" + j + "=", i * j);
+        }
+      }
+    </script>
+  </body>
+</html>

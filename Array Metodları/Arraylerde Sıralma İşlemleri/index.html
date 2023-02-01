@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+    <div id="div8"></div>
+    <div id="div9"></div>
+    <script>
+      //meyveler.sort() bizim meyveler dizisindeki elemanlarımızı alfabetik bir şekilde sıralamamızı sağlar.
+      var meyveler = ["üzüm", "ayva", "erik", "şeftali", "kayısı"];
+
+      document.getElementById("div1").innerHTML = meyveler;
+      meyveler.sort();
+
+      //meyveler.reverse() bizim meyveler dizisindeki elemanları alfabetik sıranın tersine doğru sıralar.
+      document.getElementById("div2").innerHTML = meyveler;
+      meyveler.reverse();
+      document.getElementById("div3").innerHTML = meyveler;
+
+      //Burada sayılar bu şekilde sort( ) metoduyla alfabetik şekilde gibi sıralar büyükten küçüğe küçükten büyüğe sıralamaz.
+      //Burada sıralama şekli ilk başta ilk rakamı 2 olanları alır sonra 2.rakamı 1 olanı laır bu şekilde sıralar.
+      var sayılar = [45, 25, 2, 5, 21];
+      sayılar.sort();
+      document.getElementById("div4").innerHTML = sayılar;
+
+      //Burada reverse motodoutla yaparsak o zaman bu ssefet en sondaki rakamlardan başlar sıralar.Yani yine bize büyükten küçüğe sıralamaz.
+      var sayılar2 = [45, 21, 5, 28, 52];
+      sayılar2.reverse();
+      document.getElementById("div5").innerHTML = sayılar2;
+
+      //Eğer biz sayıları küçükten büyüğe sralamak istiyorsak
+      var sayılar3 = [45, 124, 21, 43, 67];
+      sayılar3.sort((x, y) => {
+        return x - y;
+      });
+      document.getElementById("div6").innerHTML = sayılar3;
+
+      //Eğer biz büyükten küçüğe doğru sıralama yapmasını istiyorsak o zaman
+
+      let sayılar4 = [232, 21, 3, 21, 34, 45, 12];
+      sayılar4.sort((x, y) => {
+        return y - x;
+      });
+      document.getElementById("div7").innerHTML = sayılar4;
+
+      //Eğer biz burada en küçük sayıyı bulmak istiyorsak o zaman ise biz
+      sayılar4[0];
+
+      //Eğer biz sayılar 4 dzisindeki en büyük olan sayıyı bulmak istiyorsak o zaman ise biz sayılar4.length-1 şeklinde yazacağız.
+      sayılar3[sayılar3.length - 1];
+      document.writeln(sayılar3[sayılar3.length - 1]);
+
+      //Biz burada bir dizinin içine objeler oluşturduk bu şekildede biz arabanın özellikleri yazmış olduk.
+      var arabalar = [
+        { marka: "Honda", yıl: 2008 },
+        { marka: "Mercedes", yıl: 2007 },
+        { marka: "Bmw", yıl: 2020 },
+        { marka: "Skoda", yıl: 2016 },
+      ];
+
+      document.getElementById("div8").innerHTML =
+        arabalar[0].marka +
+        " " +
+        arabalar[0].yıl +
+        "<br></br>" +
+        arabalar[1].marka +
+        " " +
+        arabalar[1].yıl +
+        "<br></br>" +
+        arabalar[2].marka +
+        " " +
+        arabalar[2].yıl +
+        "<br></br>" +
+        arabalar[3].marka +
+        " " +
+        arabalar[3].yıl +
+        "<br></br>";
+
+      arabalar.sort((a, b) => {
+        return a.yıl - b.yıl;
+      });
+      document.getElementById("div8").innerHTML =
+        arabalar[0].marka +
+        " " +
+        arabalar[0].yıl +
+        "<br></br>" +
+        arabalar[1].marka +
+        " " +
+        arabalar[1].yıl +
+        "<br></br>" +
+        arabalar[2].marka +
+        " " +
+        arabalar[2].yıl +
+        "<br></br>" +
+        arabalar[3].marka +
+        " " +
+        arabalar[3].yıl +
+        "<br></br>";
+    </script>
+  </body>
+</html>
